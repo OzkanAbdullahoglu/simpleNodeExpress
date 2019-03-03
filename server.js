@@ -18,7 +18,8 @@ const apiKey = '82ff927a912991c4d8f66fd6d3d3bd25';
  *  @param {string} cityName - input to implement into request
  */
 const getDataFromApi = (res, cityName) => {
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${
+    cityName}&appid=${apiKey}`;
   request(url, (err, response, body) => {
     console.log(err);
     let dataPackage = JSON.parse(body);
@@ -29,7 +30,6 @@ const getDataFromApi = (res, cityName) => {
         error,
       });
     } else {
-      console.log('body:', body);
       let convertDate = new Date(dataPackage.dt * 1000).toISOString();
       let detailedDescription = dataPackage.weather[0].description;
       let currentTime = `Current Date and Time is ${convertDate} in ${
@@ -43,8 +43,6 @@ const getDataFromApi = (res, cityName) => {
     }
   });
 };
-
-
 
 /**
  *  @description to delete uploaded files from the uploads folder
@@ -85,15 +83,13 @@ const getDataForBulkInputs = (item, sendData) => {
   let weatherForecast;
   let detailedDescription;
   let convertDate;
-  console.log(typeof (item));
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${
     item.locationName
   }&appid=${apiKey}`;
   request(url, function(err, response, body) {
     let dataPackage = JSON.parse(body);
     if (dataPackage.cod === '404') {
-      weatherForecast = `Please re-check your input; ${
-        dataPackage.message}`;
+      weatherForecast = `Please re-check your input; ${dataPackage.message}`;
     } else {
       convertDate = new Date(dataPackage.dt * 1000).toISOString();
       detailedDescription = dataPackage.weather[0].description;
@@ -106,7 +102,6 @@ const getDataForBulkInputs = (item, sendData) => {
     sendData(err, weatherForecast);
   });
 };
-
 
 /**
  *  @description listening the port.
@@ -131,7 +126,6 @@ app.use(
  *  @param {Object[]} res - response object
  */
 app.get('/', (req, res) => {
-  console.log(typeof res);
   res.sendFile(__dirname + '/views/index.html');
 });
 
