@@ -4,7 +4,7 @@
   "description": "Get current time and weather in a location",
   "main": "server.js",
   "scripts": {
-        "start": "nodemon server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +23,10 @@
   },
   "homepage": "https://github.com/OzkanAbdullahoglu/simpleNodeExpress#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "alert-node": "^1.2.3",
+    "async": "^2.6.2",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1"
   },
   "devDependencies": {
     "eslint": "^5.15.0",
