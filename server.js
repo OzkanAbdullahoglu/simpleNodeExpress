@@ -59,7 +59,8 @@ const deleteUploads = () => {
     }
     if (files.length === 2) {
       alert(
-        "Your uploaded files' history will be deleted after the next uploading perform!"
+        "Your uploaded files' history will be deleted" +
+        'after the next uploading perform!'
       );
     } else if (files.length === 3) {
       files.map(file => {
@@ -147,6 +148,13 @@ app.post('/result', (req, res) => {
   getDataFromApi(res, cityName);
 });
 
+/**
+ *  @description print out multiple city weather forecast and current time
+ *  also sending a json with the same data
+ *  we are geting our input from the last uploaded file
+ *  @param {Object[]} req - request object
+ *  @param {Object[]} res - response object
+ */
 app.post('/multi-results', (req, res) => {
   let form = new formidable.IncomingForm();
   form
@@ -165,14 +173,18 @@ app.post('/multi-results', (req, res) => {
           dataPackage = JSON.parse(data);
         } catch (e) {
           console.log(e.message);
-          return res.json({ Error: 'Uploaded file must be in JSON format' });
+          return res.json({
+            Error: 'Uploaded file must be in JSON format',
+          });
         }
         const results = (err, results) => {
           if (err) {
             console.log(err);
           } else {
             console.log(results);
-            res.json({ 'Here is the list of all cities': results });
+            res.json({
+              'Here is the list of all cities': results,
+            });
           }
         };
         async.map(dataPackage, getDataForBulkInputs, results);
