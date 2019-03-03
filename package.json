@@ -1,0 +1,24 @@
+{
+  "name": "invisible-test",
+  "version": "1.0.0",
+  "description": "Get current time and weather in a location",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OzkanAbdullahoglu/simpleNodeExpress.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "openweatherapi"
+  ],
+  "author": "Ozkan Abdullahoglu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OzkanAbdullahoglu/simpleNodeExpress/issues"
+  },
+  "homepage": "https://github.com/OzkanAbdullahoglu/simpleNodeExpress#readme"
+}
