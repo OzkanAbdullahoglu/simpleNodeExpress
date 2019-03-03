@@ -1,0 +1,42 @@
+#---------------------------------------#
+# Project Ignores                       #
+#---------------------------------------#
+
+# output
+/.temp
+/.tmp
+/build
+/dist
+
+# dependencies
+/node_modules
+.package.swp
+
+# linters
+.eslintcache/
+.eslintrc
+.eslintrc.yaml
+.eslintrc.json
+.eslintrc.js
+.stylelintcache/
+.stylelintrc
+.stylelintrc.yaml
+.stylelintrc.json
+.stylelintrc.js
+
+# misc
+/connect.lock
+/coverage/*
+/report_*
+/reports/
+.sass-cache/
+*.log
+
+
+#---------------------------------------#
+# General Ignores                       #
+#---------------------------------------#
+
+*~
+*.orig
+.vagrant
