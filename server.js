@@ -137,8 +137,8 @@ app.use(express.static(__dirname + '/public'));
 
 /**
  *  @description print out single city weather forecast and current time
- * also sending a json with the same data
- * we are geting our input from html
+ *  also sending a json with the same data
+ *  we are geting our input from html
  *  @param {Object[]} req - request object
  *  @param {Object[]} res - response object
  */
