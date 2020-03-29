@@ -1,0 +1,18 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - async > lodash:
+        patched: '2020-03-29T17:34:19.369Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-03-29T17:35:13.644Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-03-29T17:35:13.644Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-03-29T17:35:13.644Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-03-29T17:35:13.644Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2020-03-29T17:35:13.644Z'
