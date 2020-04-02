@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/OzkanAbdullahoglu/simpleNodeExpress#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "alert-node": "^1.2.7",
     "async": "^2.6.3",
-    "express": "^4.16.4",
     "formidable": "^1.2.2",
     "minimist": "^1.2.5",
     "set-value": "^3.0.1",
