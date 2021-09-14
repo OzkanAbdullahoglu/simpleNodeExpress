@@ -30,7 +30,7 @@
     "async": "^2.6.3",
     "formidable": "^1.2.2",
     "minimist": "^1.2.5",
-    "set-value": "^3.0.1",
+    "set-value": "^4.0.1",
     "snyk": "^1.305.0"
   },
   "devDependencies": {
